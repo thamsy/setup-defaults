@@ -7,22 +7,13 @@
 	pl = pull
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
 	lgfp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --first-parent
+	tree = lg
 [color]
 	ui = true
-[user]
-	name = Tham Shi Yuan
-	email = thamsy94@gmail.com
-[difftool "kdiff3"]
-	cmd = kdiff3 \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "kdiff3"]
-	trustExitCode = false
-	path = 
-[merge]
-	tool = kdiff3
-[push]
-	default = simple
-[diff]
-	tool = kdiff3
 [core]
-	editor = vim
+	excludesFile = ~/.gitignore
+[user]
+	email = thamsy94@gmail.com
+	name = thamsy
+[init]
+	defaultBranch = main
